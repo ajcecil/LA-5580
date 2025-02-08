@@ -16,7 +16,7 @@ body {
 .nav-bar {
     display: flex;
     justify-content: center;
-    background-color: #ddd;
+    background-color: #084b08;
     padding: 10px;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .exercise:hover {
-    background-color: #109710;
+    background-color: #109710;   
 }
 
 .assignment {
