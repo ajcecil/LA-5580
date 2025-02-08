@@ -30,22 +30,21 @@ body {
 }
 
 /* Different colors for Exercise and Assignment links */
-.exercise {
-    background-color: #084b08; /* Green */
+.nav-bar a.exercise {
+    background-color: #084b08 !important; /* Green */
 }
 
-.exercise:hover {
-    background-color: #109710;   
+.nav-bar a.exercise:hover {
+    background-color: #109710 !important;
 }
 
-.assignment {
-    background-color: #004080; /* Blue */
+.nav-bar a.assignment {
+    background-color: #004080 !important; /* Blue */
 }
 
-.assignment:hover {
-    background-color: #0066cc;
+.nav-bar a.assignment:hover {
+    background-color: #0066cc !important;
 }
-
 .content {
     margin-top: 20px;
 }
