@@ -61,6 +61,8 @@ Using crop production, soil, and elevation data show trends in the relation of a
 - Leaflet
 - Tableau or Power BI
 - R
+- Html/Javascript/CSS
+- Github
 
 ### Data:
 - USDA NASS
