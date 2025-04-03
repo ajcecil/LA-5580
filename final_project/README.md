@@ -23,7 +23,7 @@
 - Iowa State Ag-Engineering and Agronomy Farm
 - Google Earth Engine Satellite Data (which satellites and bands to be determined)
 - USGS Lidar Data
-- 
+- GLSI (in-house lab data)
 
 ### Process/Methods:
 
