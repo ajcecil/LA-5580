@@ -1,27 +1,79 @@
 ##### Final Project Proposal LA 5580
 ###### Alex Cecil
 
-# Project Title:
+# Option 1
 
-## Abstract:
-This will be used on the webpage listing (~150 word max)
+## Project Title: Soil Nutrient Modeling
 
-## Overview:
-~ 300-500 words
+### Abstract:
+###### This will be used on the webpage listing (~150 word max)
 
-## Technology:
-Tools and technology proposed to use to complete the project
+### Overview:
+###### ~ 300-500 words
 
-## Data:
-List of Data Sources to be utilized
+### Technology:
+- ArcGIS Pro
+- ArcGIS Online
+- Python
+- R
+- Html/Javascript/CSS
+- Github
 
-## Process/Methods:
+### Data:
+- Iowa State Ag-Engineering and Agronomy Farm
+- Google Earth Engine Satellite Data (which satellites and bands to be determined)
+- USGS Lidar Data
+- 
+
+### Process/Methods:
 
 
-## Inspiration:
-Any web sites used for information for this project
+### Inspiration:
+###### Any web sites used for information for this project
 
-## Potential Challenges:
+### Potential Challenges:
 
 
-## Timeline for Completion:
+### Timeline for Completion:
+
+
+
+
+
+
+
+
+
+
+
+
+# Option 1
+
+## Project Title: Crop Production by State
+
+### Abstract:
+###### This will be used on the webpage listing (~150 word max)
+
+### Overview:
+Using crop production, soil, and elevation data show trends in the relation of all factors.
+
+### Technology:
+- Leaflet
+- Tableau or Power BI
+- R
+
+### Data:
+- USDA NASS
+- USDA SDA
+- USGS Lidar acess
+
+### Process/Methods:
+
+
+### Inspiration:
+###### Any web sites used for information for this project
+
+### Potential Challenges:
+
+
+### Timeline for Completion:
