@@ -1,5 +1,5 @@
-## Final Project Proposal LA 5580
-### Alex Cecil
+##### Final Project Proposal LA 5580
+###### Alex Cecil
 
 # Project Title:
 
