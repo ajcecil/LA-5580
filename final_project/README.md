@@ -6,7 +6,7 @@
 ## Project Title: Soil Nutrient Modeling
 
 ### Abstract:
-###### This will be used on the webpage listing (~150 word max)
+Using soil sample data, I will develop maps of estimated nutrient values for the surrounding areas to be utilized by people, labs, and researchers working in the area to help plan out their management for the varying conditions of the fields they will be working in.
 
 ### Overview:
 ###### ~ 300-500 words
@@ -42,40 +42,3 @@
 
 
 
-
-
-
-
-
-# Option 2
-
-## Project Title: Crop Production by State
-
-### Abstract:
-###### This will be used on the webpage listing (~150 word max)
-
-### Overview:
-Using crop production, soil, and elevation data show trends in the relation of all factors.
-
-### Technology:
-- Leaflet
-- Tableau or Power BI
-- R
-- Html/Javascript/CSS
-- Github
-
-### Data:
-- USDA NASS
-- USDA SDA
-- USGS Lidar acess
-
-### Process/Methods:
-
-
-### Inspiration:
-###### Any web sites used for information for this project
-
-### Potential Challenges:
-
-
-### Timeline for Completion:
