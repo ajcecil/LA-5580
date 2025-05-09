@@ -97,6 +97,11 @@ html, body {
   .section-text p {
     margin-bottom: .75em;
   }
+  .section-text ul {
+    margin-left: 1.5em;    /* indent */
+    list-style: disc;
+    color: #fff;           /* or whatever text color you’re using */
+  }
   
   /* TABS: buttons + content */
   .map-tabs .tab-buttons {
@@ -153,6 +158,16 @@ html, body {
     color: #ffffff
   }
   #road_map_2 p {
+    color: #ffffff
+  }
+
+  #nitrogen {
+    color: #ffffff
+  }
+  #nitrogen h2 {
+    color: #ffffff
+  }
+  #nitrogen p {
     color: #ffffff
   }
 

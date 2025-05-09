@@ -33,8 +33,18 @@
 
       <section id="general_info" class="section-text">
         <h2>Info Section</h2>
-        <p>…your test paragraphs…</p>
-        <p>…another test paragraph…</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+          hendrerit, sapien a tristique malesuada, orci velit fermentum
+          mauris, vitae tempor tortor justo quis nunc.
+        </p>
+
+        <!-- replace the second <p> with a <ul> of <li> items -->
+        <ul>
+          <li>First bullet point describing key fact A.</li>
+          <li>Second bullet point with another detail B.</li>
+          <li>Third bullet, perhaps a short call-to-action C.</li>
+        </ul>
       </section>
 
       <section id = aoi>
@@ -82,7 +92,7 @@
             <div class="section-text">
               <h2>About Map 1</h2>
               <p>…more test content…</p>
-          </div>
+            </div>
             </div>
 
             <div id="road_map_2" class="tab-content">
@@ -102,6 +112,24 @@
                 <h2>About Map 2</h2>
                 <p>…more test content…</p>
             </div>
+            </div>
+
+            <div id="nitrogen" class="tab-content active">
+              <div class="map-container">
+                  <h2 class="map-title">Iowa Nitrogen Map</h2>
+                  <arcgis-embedded-map
+                  class="my-map"
+                  item-id="a3578d0c86ca457aa8eefda935bbadbc"
+                  theme="dark"
+                  heading-enabled
+                  legend-enabled
+                  information-enabled
+                  portal-url="https://isugisf.maps.arcgis.com"
+                  ></arcgis-embedded-map>
+              </div>
+              <div class="section-text">
+                <h2>About Iowa Nitrogen Map</h2>
+                <p>…more test content…</p>
             </div>
         </div>
     </section>
