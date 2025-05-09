@@ -9,9 +9,10 @@
     <style>
       .my-map {
         width: calc(100% - 400px);  /* full width minus left/right bars */
-        height: 70vh;      /* viewport‐relative height if you like responsiveness */
-        min-height: 400px; /* optional floor */
+        height: 70vh;
+        min-height: 400px;
       }
+
       /* fixed left & right sidebars */
       .sidebar {
         position: fixed;
@@ -23,28 +24,7 @@
       .sidebar.left  { left: 0; }
       .sidebar.right { right: 0; }
 
-      /* fixed center navigation header */
-      .header {
-        position: fixed;
-        top: 0;
-        left: 200px;    /* same as sidebar width */
-        right: 200px;   /* same as sidebar width */
-        height: 60px;   /* adjust as needed */
-        background-color: #ADD8E6;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-        z-index: 1001;  /* above sidebars */
-      }
-      .header nav a {
-        margin-right: 1em;
-        text-decoration: none;
-        color: #222;
-        font-weight: bold;
-      }
-
-      /* fixed bottom bar */
+      /* bottom bar stays fixed */
       .bottom-bar {
         position: fixed;
         left: 0; right: 0; bottom: 0;
@@ -53,11 +33,30 @@
         z-index: 1000;
       }
 
-      /* main scrolling content, offset for header + sidebars + bottom */
+      /* now a normal scrolling header */
+      .header {
+        /* remove position:fixed and the left/right/top rules */
+        width: 100%;
+        height: 60px;
+        background-color: #ADD8E6;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      .header nav a {
+        margin-right: 1em;
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+      }
+
+      /* content no longer needs top margin for a fixed header */
       .content {
-        margin: 60px 200px 60px; /* top = header height, sides = sidebar widths, bottom = footer height */
+        margin: 0 200px 60px;  /* top=0; sides=200px for sidebars; bottom=60px for footer */
         padding: 20px;
-        min-height: calc(100vh - 120px); /* full viewport minus header+footer */
+        min-height: calc(100vh - 60px);
         box-sizing: border-box;
       }
 
@@ -75,22 +74,20 @@
   </head>
 
   <body>
-    <!-- sidebars -->
+    <!-- sidebars & bottom bar still fixed -->
     <div class="sidebar left"></div>
     <div class="sidebar right"></div>
+    <div class="bottom-bar"></div>
 
-    <!-- center nav header -->
-    <header class="header">
-      <nav>
-        <a href="#map">Map</a>
-        <a href="#info">Info</a>
-        <a href="#about">About</a>
-        <!-- add your nav links here -->
-      </nav>
-    </header>
-
-    <!-- your scrollable content -->
+    <!-- header now inside content, so it scrolls -->
     <div class="content">
+      <header class="header">
+        <nav>
+          <a href="#map">Map</a>
+          <a href="#info">Info</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
 
       <section id="info">
         <h2>Info Section</h2>
@@ -110,14 +107,10 @@
         ></arcgis-embedded-map>
       </div>
 
-
       <section id="about">
         <h2>About Section</h2>
         <p>…content…</p>
       </section>
     </div>
-
-    <!-- bottom bar -->
-    <div class="bottom-bar"></div>
   </body>
 </html>
