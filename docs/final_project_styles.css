@@ -29,14 +29,23 @@ html, body {
     gap: 10px;
     padding: 0 20px;
   }
-  .sidebar.left nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .sidebar.left nav a:hover {
-    text-decoration: underline;
-  }
+  /* make sidebar nav links look like buttons */
+    .sidebar.left nav a {
+        display: block;                  /* full-width blocks */
+        background-color: #8B4513;       /* brown */
+        color: white;                    /* white text */
+        padding: 0.6em 1em;              /* some breathing room */
+        margin-bottom: 0.5em;            /* space between buttons */
+        border-radius: 0.5em;            /* rounded corners */
+        text-align: center;              /* center the label */
+        text-decoration: none;           /* remove underline */
+        font-weight: bold;
+        transition: background-color .2s;
+    }
+    
+    .sidebar.left nav a:hover {
+        background-color: #5A2E0F;       /* darker on hover */
+    }
   
   /* fixed bottom bar */
   .bottom-bar {
