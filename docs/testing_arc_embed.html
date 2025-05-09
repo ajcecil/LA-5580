@@ -6,39 +6,39 @@
       src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"
     ></script>
     <style>
-      /* fixed left & right sidebars */
       .sidebar {
         position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 200px;              /* adjust width as needed */
-        background-color: #228B22; /* forest green */
+        top: 0; bottom: 0;
+        width: 200px;
+        background-color: #228B22;
         z-index: 1000;
       }
       .sidebar.left  { left: 0; }
       .sidebar.right { right: 0; }
 
-      /* fixed bottom bar */
       .bottom-bar {
         position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 60px;              /* adjust height as needed */
-        background-color: #006400; /* darker green */
+        left: 0; right: 0; bottom: 0;
+        height: 60px;
+        background-color: #006400;
         z-index: 1000;
       }
 
-      /* main scrolling area */
       .content {
-        /* leave room for sidebars and bottom bar */
-        margin: 0 200px 60px; 
+        margin: 0 200px 60px;
         padding: 20px;
-        min-height: 100vh;         /* ensure it can scroll */
+        min-height: 100vh;
         box-sizing: border-box;
       }
 
-      /* center your map + title within the content */
+      /* new center top bar */
+      .center-top-bar {
+        width: 100%;
+        height: 40px;               /* adjust thickness */
+        background-color: #ADD8E6;  /* light blue */
+        margin-bottom: 20px;        /* space below before map */
+      }
+
       .map-container {
         display: flex;
         flex-direction: column;
@@ -53,12 +53,13 @@
   </head>
 
   <body>
-    <!-- fixed sidebars -->
     <div class="sidebar left"></div>
     <div class="sidebar right"></div>
 
-    <!-- your scrollable content in the middle -->
     <div class="content">
+      <!-- this bar scrolls with the content -->
+      <div class="center-top-bar"></div>
+
       <div class="map-container">
         <h1 class="map-title">Your Map Title Here</h1>
         <arcgis-embedded-map
@@ -72,14 +73,11 @@
         ></arcgis-embedded-map>
       </div>
 
-      <!-- add whatever else you like here; it will scroll under the fixed bars -->
+      <!-- rest of your scrolling content -->
       <p>…more content…</p>
       <p>…more content…</p>
-      <p>…more content…</p>
-      <!-- etc. -->
     </div>
 
-    <!-- fixed bottom bar -->
     <div class="bottom-bar"></div>
   </body>
 </html>
