@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module"
+      src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js">
+    </script>
+
+    <!-- link out to your CSS -->
+    <link rel="stylesheet" href="map_styles.css" />
+  </head>
+
+  <body>
+    <div class="sidebar left">
+      <nav>
+        <a href="#info">Info</a>
+        <a href="#maps">Maps</a>
+        <!-- tabs are controlled below, so these can be anchors or omitted -->
+        <a href="#about">About</a>
+      </nav>
+    </div>
+
+    <div class="sidebar right"></div>
+    <div class="bottom-bar"></div>
+
+    <div class="content">
+      <header class="header">
+        <h1>Road Conditions Iowa</h1>
+      </header>
+
+      <section id="info" class="section-text">
+        <h2>Info Section</h2>
+        <p>…your test paragraphs…</p>
+        <p>…another test paragraph…</p>
+      </section>
+      <section id="maps">
+        <!-- 🌟 TABS CONTAINER 🌟 -->
+        <div class="map-tabs">
+            <div class="tab-buttons">
+            <button class="tab-btn active" data-target="road_map_1">Map 1</button>
+            <button class="tab-btn"        data-target="road_map_2">Map 2</button>
+            </div>
+
+            <div id="road_map_1" class="tab-content active">
+            <div class="map-container">
+                <h2 class="map-title">Iowa Road Conditions Map</h2>
+                <arcgis-embedded-map
+                class="my-map"
+                item-id="a3578d0c86ca457aa8eefda935bbadbc"
+                theme="dark"
+                heading-enabled
+                legend-enabled
+                information-enabled
+                portal-url="https://isugisf.maps.arcgis.com"
+                ></arcgis-embedded-map>
+            </div>
+            </div>
+
+            <div id="road_map_2" class="tab-content">
+            <div class="map-container">
+                <h2 class="map-title">Soil Picture Map</h2>
+                <arcgis-embedded-map
+                class="my-map"
+                item-id="b23ee76bb72e41bb9fd660097f0e49e5"
+                theme="dark"
+                heading-enabled
+                legend-enabled
+                information-enabled
+                portal-url="https://isugisf.maps.arcgis.com"
+                ></arcgis-embedded-map>
+
+
+            </div>
+            <div class="section-text">
+                <h2>About Map 2</h2>
+                <p>…more test content…</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+      <section id="about" class="section-text">
+        <h2>About Section</h2>
+        <p>…your about paragraphs…</p>
+        <p>…another about paragraph…</p>
+      </section>
+    </div>
+
+    <!-- tabs.js to wire up the tab buttons -->
+    <script>
+      document.querySelectorAll('.map-tabs .tab-btn')
+        .forEach(btn => {
+          btn.addEventListener('click', () => {
+            // deactivate all
+            document
+              .querySelectorAll('.map-tabs .tab-btn')
+              .forEach(b => b.classList.remove('active'));
+            document
+              .querySelectorAll('.map-tabs .tab-content')
+              .forEach(c => c.classList.remove('active'));
+
+            // activate the one we clicked
+            btn.classList.add('active');
+            document
+              .getElementById(btn.dataset.target)
+              .classList.add('active');
+          });
+        });
+    </script>
+  </body>
+</html>
+

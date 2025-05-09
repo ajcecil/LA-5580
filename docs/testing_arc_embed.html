@@ -137,6 +137,32 @@
       #map {
         color: #ffffff
       }
+      #map h2 {
+        color: #ffffff
+      }
+      #map p {
+        color: #ffffff
+      }
+
+      #road_map_1 {
+        color: #ffffff
+      }
+      #road_map_1 h2 {
+        color: #ffffff
+      }
+      #road_map_1 p {
+        color: #ffffff
+      }
+
+      #road_map_2 {
+        color: #ffffff
+      }
+      #road_map_2 h2 {
+        color: #ffffff
+      }
+      #road_map_2 p {
+        color: #ffffff
+      }
     </style>
   </head>
 
@@ -145,8 +171,9 @@
     <div class="sidebar left">
       <nav>
         <a href="#info">Info</a>
-        <a href="#map">Map</a>
+        <a href="#road_map_1">Map 1</a>
         <a href="#about">About</a>
+        <a href="#road_map_2">Map 2</a>
       </nav>
     </div>
     <div class="sidebar right"></div>
@@ -217,18 +244,20 @@
         </p>
       </section>
 
-      <div class="map-container" id="map">
-        <h2>Iowa Road Conditions Map</h2>
-        <arcgis-embedded-map
-          class="my-map"
-          item-id="a3578d0c86ca457aa8eefda935bbadbc"
-          theme="dark"
-          heading-enabled
-          legend-enabled
-          information-enabled
-          portal-url="https://isugisf.maps.arcgis.com"
-        ></arcgis-embedded-map>
-      </div>
+      <section id = road_map_1>
+        <div class="map-container" id="map">
+          <h2>Iowa Road Conditions Map</h2>
+          <arcgis-embedded-map
+            class="my-map"
+            item-id="a3578d0c86ca457aa8eefda935bbadbc"
+            theme="dark"
+            heading-enabled
+            legend-enabled
+            information-enabled
+            portal-url="https://isugisf.maps.arcgis.com"
+          ></arcgis-embedded-map>
+        </div>
+      </section>
 
       <section id="about">
         <h2>About Section</h2>
@@ -298,6 +327,29 @@
           sollicitudin. Ut ac risus sed justo tincidunt suscipit eu eu
           nulla. In hac habitasse platea dictumst.
         </p>
+      </section>
+
+      <section id = road_map_2>
+        <div class="map-container" id="map">
+          <h2>Iowa Road Conditions Map secondary test</h2>
+          <arcgis-embedded-map
+            class="my-map"
+            item-id="a3578d0c86ca457aa8eefda935bbadbc"
+            theme="dark"
+            heading-enabled
+            legend-enabled
+            information-enabled
+            portal-url="https://isugisf.maps.arcgis.com"
+          ></arcgis-embedded-map>
+        </div>
+
+        <h2>
+          Informatin about Map 2
+        </h2>
+        <p>
+          This is where more information about the above map will go.
+        </p>
+
       </section>
 
       <header class="bottom-bar"></header>
