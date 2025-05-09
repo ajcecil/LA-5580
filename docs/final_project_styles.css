@@ -1,0 +1,133 @@
+/* make sure the page fills the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* full-page background */
+  body {
+    background-color: #292929;
+  }
+  
+  /* fixed left & right sidebars */
+  .sidebar {
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 200px;
+    background-color: #228B22;
+    padding-top: 80px;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  .sidebar.left  { left: 0; }
+  .sidebar.right { right: 0; }
+  
+  /* vertical nav in left sidebar */
+  .sidebar.left nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+  }
+  .sidebar.left nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .sidebar.left nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* fixed bottom bar */
+  .bottom-bar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 60px;
+    background-color: #006400;
+    z-index: 1000;
+  }
+  
+  /* scrolling content region */
+  .content {
+    margin: 0 200px 60px;   /* sides = sidebars; bottom = footer */
+    padding: 20px;
+    min-height: calc(100vh - 60px);
+    box-sizing: border-box;
+  }
+  
+  /* simple header */
+  .header {
+    width: 100%;
+    height: 60px;
+    background-color: #ADD8E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    font-size: 1.8em;
+    color: #222222;
+    margin: 0;
+  }
+  
+  /* map sizing */
+  .my-map {
+    width: calc(100% - 400px);          /* or whatever % you like */
+    height: 70vh;
+    min-height: 400px;
+    margin: 0 auto;      /* centers it in the flex container */
+  }
+  
+  /* basic section text styling (all white here) */
+  .section-text {
+    color: #ffffff;
+  }
+  .section-text h2,
+  .section-text p {
+    margin-bottom: .75em;
+  }
+  
+  /* TABS: buttons + content */
+  .map-tabs .tab-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .map-tabs .tab-btn {
+    padding: 8px 16px;
+    background: #444444;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .map-tabs .tab-btn.active {
+    background: #666666;
+  }
+  .map-tabs .tab-content {
+    display: none;
+  }
+  .map-tabs .tab-content.active {
+    display: block;
+  }
+  #road_map_1 {
+    color: #ffffff
+  }
+  #road_map_1 h2 {
+    color: #ffffff
+  }
+  #road_map_1 p {
+    color: #ffffff
+  }
+
+  #road_map_2 {
+    color: #ffffff
+  }
+  #road_map_2 h2 {
+    color: #ffffff
+  }
+  #road_map_2 p {
+    color: #ffffff
+  }
