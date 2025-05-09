@@ -8,7 +8,7 @@
 
     <style>
       .my-map {
-        width: calc(100% - 400px);  /* full width minus left/right bars */
+        width: calc(100% - 400px);
         height: 70vh;
         min-height: 400px;
       }
@@ -19,12 +19,34 @@
         top: 0; bottom: 0;
         width: 200px;
         background-color: #228B22;
+        padding-top: 80px;       /* space for page title if needed */
+        box-sizing: border-box;
         z-index: 1000;
       }
-      .sidebar.left  { left: 0; }
-      .sidebar.right { right: 0; }
+      .sidebar.left {
+        left: 0;
+      }
+      .sidebar.right {
+        right: 0;
+      }
 
-      /* bottom bar stays fixed */
+      /* vertical nav in left sidebar */
+      .sidebar.left nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+      }
+      .sidebar.left nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .sidebar.left nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* bottom bar */
       .bottom-bar {
         position: fixed;
         left: 0; right: 0; bottom: 0;
@@ -33,31 +55,29 @@
         z-index: 1000;
       }
 
-      /* now a normal scrolling header */
+      /* scrolling content */
+      .content {
+        margin: 0 200px 60px;
+        padding: 20px;
+        min-height: calc(100vh - 60px);
+        box-sizing: border-box;
+      }
+
+      /* header now just the title */
       .header {
-        /* remove position:fixed and the left/right/top rules */
         width: 100%;
         height: 60px;
         background-color: #ADD8E6;
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        justify-content: center;
         box-sizing: border-box;
         margin-bottom: 20px;
       }
-      .header nav a {
-        margin-right: 1em;
-        text-decoration: none;
+      .header h1 {
+        font-size: 1.8em;
         color: #222;
-        font-weight: bold;
-      }
-
-      /* content no longer needs top margin for a fixed header */
-      .content {
-        margin: 0 200px 60px;  /* top=0; sides=200px for sidebars; bottom=60px for footer */
-        padding: 20px;
-        min-height: calc(100vh - 60px);
-        box-sizing: border-box;
+        margin: 0;
       }
 
       .map-container {
@@ -74,19 +94,21 @@
   </head>
 
   <body>
-    <!-- sidebars & bottom bar still fixed -->
-    <div class="sidebar left"></div>
+    <!-- left sidebar now holds navigation -->
+    <div class="sidebar left">
+      <nav>
+        <a href="#map">Map</a>
+        <a href="#info">Info</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
     <div class="sidebar right"></div>
     <div class="bottom-bar"></div>
 
-    <!-- header now inside content, so it scrolls -->
     <div class="content">
+      <!-- header = just page title -->
       <header class="header">
-        <nav>
-          <a href="#map">Map</a>
-          <a href="#info">Info</a>
-          <a href="#about">About</a>
-        </nav>
+        <h1>Road Conditions Iowa</h1>
       </header>
 
       <section id="info">
@@ -95,7 +117,6 @@
       </section>
 
       <div class="map-container" id="map">
-        <h1 class="map-title">Road Conditions Iowa</h1>
         <arcgis-embedded-map
           class="my-map"
           item-id="a3578d0c86ca457aa8eefda935bbadbc"
