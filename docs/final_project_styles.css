@@ -101,7 +101,7 @@ html, body {
   /* TABS: buttons + content */
   .map-tabs .tab-buttons {
     display: flex;
-    justify-content: center;      /* center the two buttons */
+    justify-content: left;      /* anchor the buttons to the left */
     gap: 8px;                      /* space between them */
     
     width: 100%;                   /* full width of your <section> */
