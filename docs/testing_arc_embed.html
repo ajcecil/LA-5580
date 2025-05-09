@@ -5,7 +5,9 @@
       type="module"
       src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"
     ></script>
+
     <style>
+      /* fixed left & right sidebars */
       .sidebar {
         position: fixed;
         top: 0; bottom: 0;
@@ -16,6 +18,28 @@
       .sidebar.left  { left: 0; }
       .sidebar.right { right: 0; }
 
+      /* fixed center navigation header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 200px;    /* same as sidebar width */
+        right: 200px;   /* same as sidebar width */
+        height: 60px;   /* adjust as needed */
+        background-color: #ADD8E6;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1001;  /* above sidebars */
+      }
+      .header nav a {
+        margin-right: 1em;
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+      }
+
+      /* fixed bottom bar */
       .bottom-bar {
         position: fixed;
         left: 0; right: 0; bottom: 0;
@@ -24,19 +48,12 @@
         z-index: 1000;
       }
 
+      /* main scrolling content, offset for header + sidebars + bottom */
       .content {
-        margin: 0 200px 60px;
+        margin: 60px 200px 60px; /* top = header height, sides = sidebar widths, bottom = footer height */
         padding: 20px;
-        min-height: 100vh;
+        min-height: calc(100vh - 120px); /* full viewport minus header+footer */
         box-sizing: border-box;
-      }
-
-      /* new center top bar */
-      .center-top-bar {
-        width: 100%;
-        height: 40px;               /* adjust thickness */
-        background-color: #ADD8E6;  /* light blue */
-        margin-bottom: 20px;        /* space below before map */
       }
 
       .map-container {
@@ -53,14 +70,23 @@
   </head>
 
   <body>
+    <!-- sidebars -->
     <div class="sidebar left"></div>
     <div class="sidebar right"></div>
 
-    <div class="content">
-      <!-- this bar scrolls with the content -->
-      <div class="center-top-bar"></div>
+    <!-- center nav header -->
+    <header class="header">
+      <nav>
+        <a href="#map">Map</a>
+        <a href="#info">Info</a>
+        <a href="#about">About</a>
+        <!-- add your nav links here -->
+      </nav>
+    </header>
 
-      <div class="map-container">
+    <!-- your scrollable content -->
+    <div class="content">
+      <div class="map-container" id="map">
         <h1 class="map-title">Your Map Title Here</h1>
         <arcgis-embedded-map
           style="height:600px; width:700px;"
@@ -73,12 +99,19 @@
         ></arcgis-embedded-map>
       </div>
 
-      <!-- rest of your scrolling content -->
-      <p>…more content…</p>
-      <p>…more content…</p>
+      <!-- additional sections -->
+      <section id="info">
+        <h2>Info Section</h2>
+        <p>…content…</p>
+      </section>
+
+      <section id="about">
+        <h2>About Section</h2>
+        <p>…content…</p>
+      </section>
     </div>
 
+    <!-- bottom bar -->
     <div class="bottom-bar"></div>
   </body>
 </html>
-
