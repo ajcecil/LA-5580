@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="module"
+      src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"
+    ></script>
+
+    <style>
+      .my-map {
+        width: calc(100% - 400px);
+        height: 70vh;
+        min-height: 400px;
+      }
+
+      /* fixed left & right sidebars */
+      .sidebar {
+        position: fixed;
+        top: 0; bottom: 0;
+        width: 200px;
+        background-color: #C8102E;
+        padding-top: 80px;       /* space for page title if needed */
+        box-sizing: border-box;
+        z-index: 1000;
+      }
+      .sidebar.left {
+        left: 0;
+      }
+      .sidebar.right {
+        right: 0;
+      }
+
+      /* vertical nav in left sidebar */
+      .sidebar.left nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+      }
+      .sidebar.left nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .sidebar.left nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* bottom bar */
+      .bottom-bar {
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        height: 60px;
+        background-color: #C8102E;
+        z-index: 1000;
+      }
+
+      /* scrolling content */
+      .content {
+        margin: 0 200px 60px;
+        padding: 20px;
+        min-height: calc(100vh - 60px);
+        box-sizing: border-box;
+      }
+
+      /* header now just the title */
+      .header {
+        width: 100%;
+        height: 60px;
+        background-color: #ADD8E6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        font-size: 1.8em;
+        color: #222;
+        margin: 0;
+      }
+
+      .map-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .map-title {
+        margin-bottom: 16px;
+        font-size: 1.8em;
+        color: #222;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- left sidebar now holds navigation -->
+    <div class="sidebar left">
+      <nav>
+        <a href="#info">Info</a>
+        <a href="#map">Map</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+    <div class="sidebar right"></div>
+    <div class="bottom-bar"></div>
+
+    <div class="content">
+      <!-- header = just page title -->
+      <header class="header">
+        <h1>Road Conditions Iowa</h1>
+      </header>
+
+      <section id="info">
+        <h2>Info Section</h2>
+        <p>This page is currently a test to see how I can format embedded arcgis maps with other features.</p>
+      </section>
+
+      <div class="map-container" id="map">
+        <h2>Iowa Road Conditions Map</h2>
+        <arcgis-embedded-map
+          class="my-map"
+          item-id="a3578d0c86ca457aa8eefda935bbadbc"
+          theme="dark"
+          heading-enabled
+          legend-enabled
+          information-enabled
+          portal-url="https://isugisf.maps.arcgis.com"
+        ></arcgis-embedded-map>
+      </div>
+
+      <section id="about">
+        <h2>About Section</h2>
+        <p>…content…</p>
+      </section>
+    </div>
+  </body>
+</html>
