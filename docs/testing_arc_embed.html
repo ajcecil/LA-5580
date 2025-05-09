@@ -7,6 +7,16 @@
     ></script>
 
     <style>
+      /* make sure the page fills the viewport */
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      /* full-page background */
+      body {
+        background-color: #292929;  /* ← your new background color */
+      }
       .my-map {
         width: calc(100% - 400px);
         height: 70vh;
@@ -48,11 +58,20 @@
 
       /* bottom bar */
       .bottom-bar {
-        position: fixed;
-        left: 0; right: 0; bottom: 0;
-        height: 60px;
+        width: 100%;
+        height: 200px;
         background-color: #006400;
-        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+      }
+
+      .bottom-bar h1 {
+        font-size: 1.8em;
+        color: #222;
+        margin: 0;
       }
 
       /* scrolling content */
@@ -88,7 +107,35 @@
       .map-title {
         margin-bottom: 16px;
         font-size: 1.8em;
-        color: #222;
+        color: #ffffff;
+      }
+      /* INFO SECTION */
+      #info {
+        /* sets all text in the #info container */
+        color: #ffffff           /* dark indigo */
+      }
+      #info h2 {
+        /* override the heading if you want it even darker */
+        color: #ffffff;           /* very dark blue-gray */
+      }
+      #info p {
+        color: #ffffff;           /* medium slate */
+      }
+
+      /* ABOUT SECTION */
+      #about {
+        color: #ffffff;           /* dark gray */
+      }
+      #about h2 {
+        color: #ffffff;           /* almost black */
+      }
+      #about p {
+        color: #ffffff;           /* mid-gray */
+      }
+
+      /*Map Section*/
+      #map {
+        color: #ffffff
       }
     </style>
   </head>
@@ -103,7 +150,6 @@
       </nav>
     </div>
     <div class="sidebar right"></div>
-    <div class="bottom-bar"></div>
 
     <div class="content">
       <!-- header = just page title -->
@@ -133,6 +179,8 @@
         <h2>About Section</h2>
         <p>…content…</p>
       </section>
+
+      <header class="bottom-bar"></header>
     </div>
   </body>
 </html>
