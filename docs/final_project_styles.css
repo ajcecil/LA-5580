@@ -101,19 +101,34 @@ html, body {
   /* TABS: buttons + content */
   .map-tabs .tab-buttons {
     display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+    justify-content: center;      /* center the two buttons */
+    gap: 8px;                      /* space between them */
+    
+    width: 100%;                   /* full width of your <section> */
+    padding: 12px 0;               /* vertical padding for the bar */
+    margin-bottom: 16px;           /* space below bar before the maps */
+    
+    background-color: #333;        /* dark background for the bar */
+    box-sizing: border-box;
+    border-radius: 4px;            /* optional rounded corners */
   }
+  
+  /* style the buttons themselves so they stand out in the bar */
   .map-tabs .tab-btn {
-    padding: 8px 16px;
-    background: #444444;
-    color: #ffffff;
+    background: #eee;
+    color: #333;
     border: none;
-    cursor: pointer;
+    padding: 8px 16px;
     border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
   }
   .map-tabs .tab-btn.active {
-    background: #666666;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  .map-tabs .tab-btn:hover {
+    background: #ddd;
   }
   .map-tabs .tab-content {
     display: none;
