@@ -7,6 +7,11 @@
     ></script>
 
     <style>
+      .my-map {
+        width: calc(100% - 400px);  /* full width minus left/right bars */
+        height: 70vh;      /* viewport‐relative height if you like responsiveness */
+        min-height: 400px; /* optional floor */
+      }
       /* fixed left & right sidebars */
       .sidebar {
         position: fixed;
@@ -89,7 +94,7 @@
       <div class="map-container" id="map">
         <h1 class="map-title">Your Map Title Here</h1>
         <arcgis-embedded-map
-          style="height:600px; width:700px;"
+          class="my-map"
           item-id="a3578d0c86ca457aa8eefda935bbadbc"
           theme="dark"
           heading-enabled
