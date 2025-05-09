@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Add script to the <head> of your page to load the embeddable map component -->
-    <script type="module" src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
+    <!-- Load the embeddable map component -->
+    <script
+      type="module"
+      src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"
+    ></script>
+
+    <style>
+      /* container to center its contents */
+      .map-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* optional styling for your title */
+      .map-title {
+        margin-bottom: 16px;
+        font-size: 1.8em;
+        color: #222;
+      }
+    </style>
   </head>
   <body>
-    <!-- Add custom element to <body> of your page -->
-   <arcgis-embedded-map style="height:600px;width:700px;" item-id="a3578d0c86ca457aa8eefda935bbadbc" theme="dark" heading-enabled legend-enabled information-enabled portal-url="https://isugisf.maps.arcgis.com" ></arcgis-embedded-map>
+    <div class="map-container">
+      <!-- Title at the top -->
+      <h1 class="map-title">Your Map Title Here</h1>
+
+      <!-- Centered map -->
+      <arcgis-embedded-map
+        style="height:600px; width:700px;"
+        item-id="a3578d0c86ca457aa8eefda935bbadbc"
+        theme="dark"
+        heading-enabled
+        legend-enabled
+        information-enabled
+        portal-url="https://isugisf.maps.arcgis.com"
+      ></arcgis-embedded-map>
+    </div>
   </body>
+</html>
