@@ -196,12 +196,12 @@ html, body {
     z-index: 2000;
   }
   .dropdown-menu li a {
-    color: #333333;
+    color: #ffffff;
     padding: 0.5em 1em;
     white-space: nowrap;
   }
   .dropdown-menu li a:hover {
-    background: #f0f0f0;
+    background: #535353;
   }
   
   /* Show dropdown on hover */
