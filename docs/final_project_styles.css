@@ -20,7 +20,6 @@ html, body {
     z-index: 1000;
   }
   .sidebar.left  { left: 0; }
-  .sidebar.right { right: 0; }
   
   /* vertical nav in left sidebar */
   .sidebar.left nav {
@@ -58,7 +57,7 @@ html, body {
   
   /* scrolling content region */
   .content {
-    margin: 0 200px 60px;   /* sides = sidebars; bottom = footer */
+    margin: 0 0 60px 200px;   /* sides = sidebars; bottom = footer */
     padding: 20px;
     min-height: calc(100vh - 60px);
     box-sizing: border-box;
@@ -102,7 +101,7 @@ html, body {
     list-style: disc;
     color: #fff;           /* or whatever text color you’re using */
   }
-  
+
   /* TABS: buttons + content */
   .map-tabs .tab-buttons {
     display: flex;
@@ -141,6 +140,61 @@ html, body {
   .map-tabs .tab-content.active {
     display: block;
   }
+
+  /* ─── Horizontal Menu Bar ───────────────────────── */
+.menu-bar {
+    background: #006400;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    height: 50px;
+  }
+  .menu > li {
+    position: relative;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 50px;
+    display: block;
+    padding: 0 0.5em;
+  }
+  
+  /* Dropdown container hidden by default */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 2000;
+  }
+  .dropdown-menu li a {
+    color: #333;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+  }
+  .dropdown-menu li a:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
   #road_map_1 {
     color: #ffffff
   }
@@ -151,13 +205,13 @@ html, body {
     color: #ffffff
   }
 
-  #road_map_2 {
+  #pH {
     color: #ffffff
   }
-  #road_map_2 h2 {
+  #pH h2 {
     color: #ffffff
   }
-  #road_map_2 p {
+  #pH p {
     color: #ffffff
   }
 
