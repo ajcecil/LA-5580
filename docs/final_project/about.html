@@ -1,8 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About the project</title>
+    <title>About the Project</title>
+    <script type="module"
+      src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js">
+    </script>
 
+    <!-- link out to your CSS -->
     <link rel="stylesheet" href="final_project_styles.css" />
   </head>
+
+  <body>
+    <header class="header">
+      <h1>Road Conditions Iowa</h1>
+    </header>
+    <nav class="menu-bar">
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#">About ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">Project Overview</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Tools ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/python" target="_blank">Python</a></li>
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/R" target="_blank">R</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Data Sources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://apps.nationalmap.gov/lidar-explorer/#/" target="_blank">USGS Lidar Explorer</a></li>
+            <li><a href="https://earthengine.google.com/" target="_blank">Google Earth Engine </a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Imagery Archive ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/rgb" target="_blank">RGB Maps</a></li>
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/imagery" target="_blank">Remote Sensing Imagery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">References ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.agron.iastate.edu/glsi/" target="_blank">GLSI</a></li>
+            <li><a href="https://www.agrn.iastate.edu" target="_blank">Iowa State Agronomy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class ="content">
+      <section id="general">
+        <h2>Project Overview</h2>
+        <p>
+          This will contain a general project overview paragraph
+        </p>
+      </section>
+      <section id="methods">
+        <h2>Methods</h2>
+        <p>
+          Ths will contain a flow and explaination of methods.
+        </p>
+      </section>
+    </div>
+
+  </body>
 </html>
