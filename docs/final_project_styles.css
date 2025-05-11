@@ -104,7 +104,7 @@ html, body {
   .section-text ul {
     margin-left: 1.5em;    /* indent */
     list-style: disc;
-    color: #fff;           /* or whatever text color you’re using */
+    color: #ffffff;           /* or whatever text color you’re using */
   }
 
   /* TABS: buttons + content */
@@ -117,15 +117,15 @@ html, body {
     padding: 12px 0;               /* vertical padding for the bar */
     margin-bottom: 16px;           /* space below bar before the maps */
     
-    background-color: #333;        /* dark background for the bar */
+    background-color: #333333;        /* dark background for the bar */
     box-sizing: border-box;
     border-radius: 4px;            /* optional rounded corners */
   }
   
   /* style the buttons themselves so they stand out in the bar */
   .map-tabs .tab-btn {
-    background: #eee;
-    color: #333;
+    background: #eeeeee;
+    color: #333333;
     border: none;
     padding: 8px 16px;
     border-radius: 4px;
@@ -133,11 +133,11 @@ html, body {
     font-weight: bold;
   }
   .map-tabs .tab-btn.active {
-    background: #fff;
+    background: #ffffff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   }
   .map-tabs .tab-btn:hover {
-    background: #ddd;
+    background: #dddddd;
   }
   .map-tabs .tab-content {
     display: none;
@@ -174,7 +174,7 @@ html, body {
     position: relative;
   }
   .menu a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     line-height: 50px;
@@ -188,7 +188,7 @@ html, body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #fff;
+    background: #ffffff;
     list-style: none;
     margin: 0;
     padding: 0.5em 0;
@@ -196,7 +196,7 @@ html, body {
     z-index: 2000;
   }
   .dropdown-menu li a {
-    color: #333;
+    color: #333333;
     padding: 0.5em 1em;
     white-space: nowrap;
   }
