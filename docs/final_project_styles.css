@@ -73,7 +73,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: top 0.3s ease;    /* animate hiding/showing */
+    transition: top 0.1s ease;    /* animate hiding/showing */
     z-index: 1001;
   }
   .header.hidden{
