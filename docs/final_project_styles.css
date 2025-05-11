@@ -29,22 +29,22 @@ html, body {
     padding: 0 20px;
   }
   /* make sidebar nav links look like buttons */
-    .sidebar.left nav a {
-        display: block;                  /* full-width blocks */
-        background-color: #006400;       /* green */
-        color: white;                    /* white text */
-        padding: 0.6em 1em;              /* some breathing room */
-        margin-bottom: 0.5em;            /* space between buttons */
-        border-radius: 0.5em;            /* rounded corners */
-        text-align: center;              /* center the label */
-        text-decoration: none;           /* remove underline */
-        font-weight: bold;
-        transition: background-color .2s;
-    }
+   .sidebar.left nav a {
+       display: block;                  /* full-width blocks */
+       background-color: #006400;       /* green */
+       color: white;                    /* white text */
+       padding: 0.6em 1em;              /* some breathing room */
+       margin-bottom: 0.5em;            /* space between buttons */
+       border-radius: 0.5em;            /* rounded corners */
+       text-align: center;              /* center the label */
+       text-decoration: none;           /* remove underline */
+       font-weight: bold;
+       transition: background-color .2s;
+   }
     
-    .sidebar.left nav a:hover {
-        background-color: #046997;       /* lighter on hover */
-    }
+   .sidebar.left nav a:hover {
+       background-color: #046997;       /* lighter on hover */
+   }
   
   /* fixed bottom bar */
   .bottom-bar {
@@ -57,22 +57,24 @@ html, body {
   
   /* scrolling content region */
   .content {
-    margin: 0 0 60px 200px;   /* sides = sidebars; bottom = footer */
+    margin: 110px 0 60px 200px;   /* sides = sidebars; bottom = footer */
     padding: 20px;
-    min-height: calc(100vh - 60px);
-    box-sizing: border-box;
+    min-height: calc(100vh - 110px - 60px);
   }
   
-  /* simple header */
+  /* spanning header */
   .header {
-    width: 100%;
-    height: 60px;
+    position: fixed;
+    top:    0;
+    left:   200px;   /* match your sidebar width */
+    right:  0;
+    height: 60px;    /* whatever your header height is */
     background-color: #ADD8E6;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    margin: 0;       /* remove that 20px bottom margin */
+    z-index: 1001;   /* sit above content */
   }
   .header h1 {
     font-size: 1.8em;
@@ -141,11 +143,17 @@ html, body {
     display: block;
   }
 
-  /* ─── Horizontal Menu Bar ───────────────────────── */
-.menu-bar {
+  /* ─── Menu Bar ───────────────────────── */
+  .menu-bar {
+    position: fixed;
+    top:    60px;    /* directly under the header */
+    left:   200px;
+    right:  0;
+    height: 50px;    /* whatever your menu height is */
     background: #006400;
     padding: 0 20px;
     box-sizing: border-box;
+    z-index: 1000;
   }
   .menu {
     list-style: none;
