@@ -66,15 +66,18 @@ html, body {
   .header {
     position: fixed;
     top:    0;
-    left:   0;   /* match your sidebar width */
+    left:   0;
     right:  0;
-    height: 100px;    /* whatever your header height is */
+    height: 100px;
     background-color: #ADD8E6;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;       /* remove that 20px bottom margin */
-    z-index: 1001;   /* sit above content */
+    transition: top 0.3s ease;    /* animate hiding/showing */
+    z-index: 1001;
+  }
+  .header.hidden{
+    top: -100px;
   }
   .header h1 {
     font-size: 1.8em;
@@ -146,7 +149,7 @@ html, body {
   /* ─── Menu Bar ───────────────────────── */
   .menu-bar {
     position: fixed;
-    top:    100px;    /* directly under the header */
+    top:    0;    /* pin to top when header is hidden */
     left:   0;
     right:  0;
     height: 50px;    /* whatever your menu height is */
@@ -154,6 +157,9 @@ html, body {
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 1000;
+  }
+  .menu-bar.initial {
+    top: 100px;
   }
   .menu {
     list-style: none;
