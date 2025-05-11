@@ -12,7 +12,7 @@ html, body {
   /* fixed left & right sidebars */
   .sidebar {
     position: fixed;
-    top: 0; bottom: 0;
+    top: 110px; bottom: 0;
     width: 200px;
     background-color: #008600;
     padding-top: 80px;
@@ -57,7 +57,7 @@ html, body {
   
   /* scrolling content region */
   .content {
-    margin: 110px 0 60px 200px;   /* sides = sidebars; bottom = footer */
+    margin: 150px 50px 60px 50px;   /* sides = sidebars; bottom = footer */
     padding: 20px;
     min-height: calc(100vh - 110px - 60px);
   }
@@ -66,9 +66,9 @@ html, body {
   .header {
     position: fixed;
     top:    0;
-    left:   200px;   /* match your sidebar width */
+    left:   0;   /* match your sidebar width */
     right:  0;
-    height: 60px;    /* whatever your header height is */
+    height: 100px;    /* whatever your header height is */
     background-color: #ADD8E6;
     display: flex;
     align-items: center;
@@ -146,8 +146,8 @@ html, body {
   /* ─── Menu Bar ───────────────────────── */
   .menu-bar {
     position: fixed;
-    top:    60px;    /* directly under the header */
-    left:   200px;
+    top:    100px;    /* directly under the header */
+    left:   0;
     right:  0;
     height: 50px;    /* whatever your menu height is */
     background: #006400;
