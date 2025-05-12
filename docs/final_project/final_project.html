@@ -102,19 +102,19 @@
         <!-- 🌟 TABS CONTAINER 🌟 -->
         <div class="map-tabs">
             <div class="tab-buttons">
-            <button class="tab-btn active" data-target="road_map_1">Map 1</button>
-            <button class="tab-btn"        data-target="pH">Map 2</button>
-            <button class="tab-btn"        data-target="nitrogen">Map 3</button>
+            <button class="tab-btn active" data-target="pH">pH Map</button>
+            <button class="tab-btn"        data-target="bph">Buffer pH Map</button>
+            <button class="tab-btn"        data-target="om">Organic Matter</button>
             </div>
 
-            <div id="road_map_1" class="tab-content active">
+            <div id="ph" class="tab-content active">
             <div class="map-container">
-                <h2 class="map-title">Iowa Road Conditions Map</h2>
+                <h2 class="map-title">pH</h2>
                 <arcgis-embedded-map
                 class="my-map"
-                item-id="a3578d0c86ca457aa8eefda935bbadbc"
+                item-id="6ce566a61fdc44d09c1e9b845850d0b3"
                 theme="dark"
-                heading-enabled
+                bookmarks-enabled
                 legend-enabled
                 information-enabled
                 portal-url="https://isugisf.maps.arcgis.com"
@@ -126,14 +126,14 @@
             </div>
             </div>
 
-            <div id="pH" class="tab-content">
+            <div id="BpH" class="tab-content">
             <div class="map-container">
-                <h2 class="map-title">Iowa pH Map</h2>
+                <h2 class="map-title">Buffer pH Map</h2>
                 <arcgis-embedded-map
                 class="my-map"
-                item-id="a3578d0c86ca457aa8eefda935bbadbc"
+                item-id="66c6f615f4474e49aaff4024fb8ac351"
                 theme="dark"
-                heading-enabled
+                bookmarks-enabled
                 legend-enabled
                 information-enabled
                 portal-url="https://isugisf.maps.arcgis.com"
@@ -145,14 +145,14 @@
             </div>
             </div>
 
-            <div id="nitrogen" class="tab-content">
+            <div id="om" class="tab-content">
               <div class="map-container">
-                  <h2 class="map-title">Iowa Nitrogen Map</h2>
+                  <h2 class="map-title">Organic Matter Map</h2>
                   <arcgis-embedded-map
                   class="my-map"
-                  item-id="a3578d0c86ca457aa8eefda935bbadbc"
+                  item-id="561501da2eae4fbcbd676febf1341d10"
                   theme="dark"
-                  heading-enabled
+                  bookmarks-enabled
                   legend-enabled
                   information-enabled
                   portal-url="https://isugisf.maps.arcgis.com"
