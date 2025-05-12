@@ -108,6 +108,12 @@ html, body {
     width: auto;
     margin: 0 0 1em 1em;
   }
+  .dog-image {
+    height: auto;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
   /* map sizing */
   .my-map {
     width: calc(100% - 400px);          /* or whatever % you like */
