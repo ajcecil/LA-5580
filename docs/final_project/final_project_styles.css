@@ -85,6 +85,12 @@ html, body {
     color: #F0F0F0;
     margin: 0;
   }
+  .header-logo{
+    position: absolute;
+    left: 15px;
+    height: clac(100% - 30px);
+    width: auto;
+  }
   
   /* map sizing */
   .my-map {

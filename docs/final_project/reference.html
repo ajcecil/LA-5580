@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About the Project</title>
+    <script type="module"
+      src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js">
+    </script>
+
+    <!-- link out to your CSS -->
+    <link rel="stylesheet" href="final_project_styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="ajc_logo.png" alt="logo" class="header-logo">
+      <h1>About the Project</h1>
+    </header>
+    <nav class="menu-bar">
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#">Pages ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="final_project_page.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Tools ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/python" target="_blank">Python</a></li>
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/R" target="_blank">R</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Data Sources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://apps.nationalmap.gov/lidar-explorer/#/" target="_blank">USGS Lidar Explorer</a></li>
+            <li><a href="https://earthengine.google.com/" target="_blank">Google Earth Engine </a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Imagery Archive ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/rgb" target="_blank">RGB Maps</a></li>
+            <li><a href="https://github.com/ajcecil/LA-5580/tree/main/docs/final_project/imagery" target="_blank">Remote Sensing Imagery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">References ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.agron.iastate.edu/glsi/" target="_blank">GLSI</a></li>
+            <li><a href="https://www.agrn.iastate.edu" target="_blank">Iowa State Agronomy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class ="content">
+      <section id="general" class="section-text">
+        <h2>Project Overview</h2>
+        <p>
+          This will contain a general project overview paragraph
+        </p>
+      </section>
+      <section id="methods" class="section-text">
+        <h2>Methods</h2>
+        <p>
+          Ths will contain a flow and explaination of methods.
+        </p>
+      </section>
+    </div>
+    <!-- tabs.js to wire up the tab buttons -->
+    <script>
+      document.querySelectorAll('.map-tabs .tab-btn')
+        .forEach(btn => {
+          btn.addEventListener('click', () => {
+            // deactivate all
+            document
+              .querySelectorAll('.map-tabs .tab-btn')
+              .forEach(b => b.classList.remove('active'));
+            document
+              .querySelectorAll('.map-tabs .tab-content')
+              .forEach(c => c.classList.remove('active'));
+
+            // activate the one we clicked
+            btn.classList.add('active');
+            document
+              .getElementById(btn.dataset.target)
+              .classList.add('active');
+          });
+        });
+    </script>
+    <script>
+      const header   = document.querySelector('.header');
+      const menuBar  = document.querySelector('.menu-bar');
+      let   lastScroll = window.pageYOffset;
+
+      // on load: menu sits under the header
+      menuBar.classList.add('initial');
+
+      window.addEventListener('scroll', () => {
+        const current = window.pageYOffset;
+
+        if (current > lastScroll && current > header.offsetHeight) {
+          // scrolling DOWN past the header → hide header, pin menu to top
+          header.classList.add('hidden');
+          menuBar.classList.remove('initial');
+          menuBar.style.top = '0';
+        } else if (current < lastScroll) {
+          // scrolling UP → show header again, push menu back down
+          header.classList.remove('hidden');
+          menuBar.classList.add('initial');
+          menuBar.style.top = header.offsetHeight + 'px';
+        }
+
+        lastScroll = current;
+      });
+    </script> 
+  </body>
+</html>
