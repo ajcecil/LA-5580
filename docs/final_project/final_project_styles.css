@@ -108,6 +108,12 @@ html, body {
     width: auto;
     margin: 0 0 1em 1em;
   }
+  .pit-image {
+    float: right;
+    height: auto;
+    width: 400px;
+    margin: 0 0 1em 1em;
+  }
   .dog-image {
     height: auto;
     width: 500px;
@@ -127,6 +133,7 @@ html, body {
     color: #ffffff;
   }
   .section-text h2,
+  .section-text h3,
   .section-text p {
     margin-bottom: .75em;
   }
