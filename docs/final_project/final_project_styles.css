@@ -97,9 +97,10 @@ html, body {
     display: block;
   }
   .method-flow {
-    height: 750px;
+    height: 850px;
     width: auto;
     display: block;
+    margin: 0 auto;
   }
   /* map sizing */
   .my-map {
