@@ -102,6 +102,12 @@ html, body {
     display: block;
     margin: 0 auto;
   }
+  .overview-image {
+    float: right;
+    height: 300px;
+    width: auto;
+    margin: 0 0 1em 1em;
+  }
   /* map sizing */
   .my-map {
     width: calc(100% - 400px);          /* or whatever % you like */
