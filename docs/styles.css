@@ -15,7 +15,7 @@ body {
 .nav-bar {
         display: flex;
         justify-content: center;
-        background-color: #ddd;
+        background-color: #dddddd;
         padding: 10px;
 }
 .nav-bar a {
@@ -23,7 +23,7 @@ body {
         padding: 10px 20px;
         margin: 0 5px;
         background-color: #474747; /* Green color for tabs */
-        border: 1px solid #ccc;
+        border: 1px solid #cccccc;
         border-radius: 5px;
         color: white;
 }
@@ -33,7 +33,7 @@ body {
 .nav-bar-final {
         display: flex;
         justify-content: center;
-        background-color: #ddd;
+        background-color: #dddddd;
         padding: 10px;
 }
 .nav-bar-final a {
@@ -41,7 +41,7 @@ body {
         padding: 10px 20px;
         margin: 0 5px;
         background-color: #084b08; /* Green color for tabs */
-        border: 1px solid #ccc;
+        border: 1px solid #cccccc;
         border-radius: 5px;
         color: white;
 }
