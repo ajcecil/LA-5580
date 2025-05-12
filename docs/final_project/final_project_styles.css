@@ -221,42 +221,42 @@ html, body {
     display: block;
   }
 
-  #road_map_1 {
+  #om {
     color: #ffffff
   }
-  #road_map_1 h2 {
+  #om h2 {
     color: #ffffff
   }
-  #road_map_1 p {
-    color: #ffffff
-  }
-
-  #pH {
-    color: #ffffff
-  }
-  #pH h2 {
-    color: #ffffff
-  }
-  #pH p {
+  #om p {
     color: #ffffff
   }
 
-  #nitrogen {
+  #ph {
     color: #ffffff
   }
-  #nitrogen h2 {
+  #ph h2 {
     color: #ffffff
   }
-  #nitrogen p {
+  #ph p {
     color: #ffffff
   }
 
-  #aoi_map {
+  #bph {
     color: #ffffff
   }
-  #aoi_map h2 {
+  #bph h2 {
     color: #ffffff
   }
-  #aoi_map p {
+  #bph p {
+    color: #ffffff
+  }
+
+  #samples {
+    color: #ffffff
+  }
+  #samples h2 {
+    color: #ffffff
+  }
+  #samples p {
     color: #ffffff
   }
