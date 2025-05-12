@@ -87,10 +87,11 @@
         <!-- 🌟 TABS CONTAINER 🌟 -->
         <div class="map-tabs">
             <div class="tab-buttons">
-            <button class="tab-btn active" data-target="samples">Sampled Points Map</button>
-            <button class="tab-btn"        data-target="ph">pH Map</button>
-            <button class="tab-btn"        data-target="bph">Buffer pH Map</button>
+            <button class="tab-btn active" data-target="samples">Sampled Points</button>
+            <button class="tab-btn"        data-target="ph">pH</button>
+            <button class="tab-btn"        data-target="bph">Buffer pH</button>
             <button class="tab-btn"        data-target="om">Organic Matter</button>
+            <button class="tab-btn"        data-target="p">Phosphorus</button>
             </div>
 
             <div id="samples" class="tab-content active">
@@ -156,6 +157,24 @@
                   <arcgis-embedded-map
                   class="my-map"
                   item-id="561501da2eae4fbcbd676febf1341d10"
+                  theme="dark"
+                  bookmarks-enabled
+                  legend-enabled
+                  information-enabled
+                  portal-url="https://isugisf.maps.arcgis.com"
+                  ></arcgis-embedded-map>
+              </div>
+              <div class="section-text">
+                <h2>About Iowa Nitrogen Map</h2>
+                <p>…more test content…</p>
+            </div>
+
+            <div id="p" class="tab-content">
+              <div class="map-container">
+                  <h2 class="map-title">Phosphorus Map</h2>
+                  <arcgis-embedded-map
+                  class="my-map"
+                  item-id="7514f25f93f14b4ab6d92b4c0450b820"
                   theme="dark"
                   bookmarks-enabled
                   legend-enabled
