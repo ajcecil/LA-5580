@@ -96,7 +96,11 @@ html, body {
     width: auto;
     display: block;
   }
-  
+  .method-flow {
+    height: 300px;
+    width: auto;
+    display: block;
+  }
   /* map sizing */
   .my-map {
     width: calc(100% - 400px);          /* or whatever % you like */
