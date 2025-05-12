@@ -30,7 +30,13 @@ body {
 .nav-bar a:hover {
         background-color: #9c9c9c;
 }
-.nav-bar a {
+.nav-bar-final {
+        display: flex;
+        justify-content: center;
+        background-color: #ddd;
+        padding: 10px;
+}
+.nav-bar-final a {
         text-decoration: none;
         padding: 10px 20px;
         margin: 0 5px;
@@ -39,7 +45,7 @@ body {
         border-radius: 5px;
         color: white;
 }
-.nav-bar a:hover {
+.nav-bar-final a:hover {
         background-color: #109710;
 }
 .content {
