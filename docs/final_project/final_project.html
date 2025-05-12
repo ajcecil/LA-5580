@@ -77,21 +77,6 @@
         </ul>
       </section>
 
-      <section id = aoi>
-        <div class="map-container" id="aoi_map">
-          <h2>Sampled Points</h2>
-          <arcgis-embedded-map
-            class="my-map"
-            item-id="8fcdbe469b744981a9331930d1c3fbcd"
-            theme="dark"
-            bookmarks-enabled
-            legend-enabled
-            information-enabled
-            portal-url="https://isugisf.maps.arcgis.com"
-          ></arcgis-embedded-map>
-        </div>
-      </section>
-
       <section id="property_info" class="section-text">
         <h2>Info Section</h2>
         <p>…your test paragraphs…</p>
@@ -102,11 +87,30 @@
         <!-- 🌟 TABS CONTAINER 🌟 -->
         <div class="map-tabs">
             <div class="tab-buttons">
-            <button class="tab-btn active" data-target="pH">pH Map</button>
+            <button class="tab-btn active" data-target="samples">Sampled Points Map</button>
+            <button class="tab-btn"        data-target="ph">pH Map</button>
             <button class="tab-btn"        data-target="bph">Buffer pH Map</button>
             <button class="tab-btn"        data-target="om">Organic Matter</button>
             </div>
 
+            <div id="samples" class="tab-content active">
+              <div class="map-container">
+                  <h2 class="map-title">Sampled Points</h2>
+                  <arcgis-embedded-map
+                  class="my-map"
+                  item-id="8fcdbe469b744981a9331930d1c3fbcd"
+                  theme="dark"
+                  bookmarks-enabled
+                  legend-enabled
+                  information-enabled
+                  portal-url="https://isugisf.maps.arcgis.com"
+                  ></arcgis-embedded-map>
+              </div>
+              <div class="section-text">
+                <h2>About Map 1</h2>
+                <p>…more test content…</p>
+              </div>
+              </div>
             <div id="ph" class="tab-content active">
             <div class="map-container">
                 <h2 class="map-title">pH</h2>
@@ -126,7 +130,7 @@
             </div>
             </div>
 
-            <div id="BpH" class="tab-content">
+            <div id="bph" class="tab-content">
             <div class="map-container">
                 <h2 class="map-title">Buffer pH Map</h2>
                 <arcgis-embedded-map
@@ -164,12 +168,6 @@
             </div>
         </div>
     </section>
-
-      <section id="about" class="section-text">
-        <h2>About Section</h2>
-        <p>…your about paragraphs…</p>
-        <p>…another about paragraph…</p>
-      </section>
     </div>
 
     <!-- tabs.js to wire up the tab buttons -->
