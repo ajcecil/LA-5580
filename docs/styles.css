@@ -22,6 +22,18 @@ body {
         text-decoration: none;
         padding: 10px 20px;
         margin: 0 5px;
+        background-color: #474747; /* Green color for tabs */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: white;
+}
+.nav-bar a:hover {
+        background-color: #9c9c9c;
+}
+.nav-bar a {
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
         background-color: #084b08; /* Green color for tabs */
         border: 1px solid #ccc;
         border-radius: 5px;
